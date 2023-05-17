@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: task9p
+  labels:
+    app: sit737_task9p
+spec:
+  # modify replicas according to your case
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sit737_task9p
+  template:
+    metadata:
+      labels:
+        app: sit737_task9p
+    spec:
+      containers:
+      - name: task7p
+        image: akshatarora/sit737:task9
+        ports:
+        - containerPort: 3000

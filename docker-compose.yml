@@ -1,0 +1,12 @@
+version: '3'
+services:
+
+  sample-application:
+    image: akshatarora/sit737:task9
+    build: 
+      context: ./
+      dockerfile: Dockerfile
+    container_name: task9
+    ports:
+      - "3000:3000"
+    restart: "no"
